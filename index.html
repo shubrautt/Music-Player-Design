@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-chevron-down fa-2x"></i>
+        <img src="Sia - Cheap Thrills.jpg" alt="">
+        <p class="songName">Sia - Cheap Thrills</p>
+        <div class="controls-container center">
+            <div class="range">
+                <p style="float: left; margin: 15px 0 0 10px;">00:00</p>
+                <p style="float: right; margin: 15px 10px 0 0;">39:45</p>
+                <input type="range" name="" id="range" max="100" min="0" value="10">
+            </div>
+            <div class="controls center">
+                <i class="fas fa-step-backward fa-2x"></i>
+                <i class="fas fa-play fa-2x" id="btn" onclick="changeClass();"></i>
+                <i class="fas fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("range").disabled = true;
+        const btn = document.getElementById("btn");
+        function changeClass(){
+            if(btn.classList.contains("fa-play")){
+                btn.classList.remove("fa-play");
+                btn.classList.add("fa-pause");
+            }else{
+                btn.classList.add("fa-play");
+            }
+        }
+    </script>
+</body>
+</html>
